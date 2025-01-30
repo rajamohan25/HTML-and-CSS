@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to left,green,yellow,red);
+        }
+        .outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            margin-block: 100px;
+            display: flex;
+            height: 350px;
+            width:650px;
+            background-image: linear-gradient(to left,white,rgb(86, 201, 240));
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px grey;
+        }
+        img{
+            height: 180px;
+            border:7px solid white;
+            border-radius: 300px;
+        }
+        .left{
+            display: flex;
+            flex-direction: row;
+            flex-basis: 30%;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .right{
+            margin-top: 30px;
+            margin-left: 10px;
+            flex-basis: 70%;
+        }
+        main div{
+            display: inline-block;
+        }
+        button{
+            height:45px;
+            width:120px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        header h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        header #o{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: rgb(34, 30, 30);
+            padding-bottom: 20px;
+        }
+        header #taf{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: light;
+        }
+        main{
+            margin-block: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        main div{
+            margin-right: 30px;
+        }
+        main p{
+            font-weight: bold;
+        }
+        #f{
+            background-color: rgb(34, 30, 30);
+            color:white;
+            cursor: pointer;
+        }
+        #v{
+            border:1px solid rgb(34, 30, 30);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="card">
+            <div class="left">
+                <img src="gup-photoaidcom-cropped.jpg">
+            </div>
+            <div class="right">
+                <header>
+                <h2>Bradley Steve</h2>
+                <p id="o">@bradsteve</p>
+                <p id="taf">I'm a front End Developer, follow me to be the first who <br>see my new work</p>
+                </header>
+                <main>
+                    <div>
+                        <h3>15K</h3>
+                        <p>Views</p>
+                    </div>
+                    <div>
+                        <h3>82</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div>
+                        <h3>1.3M</h3>
+                        <p>Followers</p>
+                    </div>
+                </main>
+                <div class="button">
+                    <button id="f">Follow</button>
+                    <button id="v">View profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
