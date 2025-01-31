@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialMedias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(235, 227, 227);
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .icons{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            background-color: white;
+            padding: 1em;
+            border-radius: 50%;
+            color: black;
+            height: 64px;
+            width: 64px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 5px 10px gray;
+            text-decoration: none;
+        }
+        a i{
+            font-size: 32px;
+        }
+        a:hover{
+            background-color: var(--acc-color);
+            color: white;
+        }
+        a::before{
+            content: attr(social);
+            position: absolute;
+            background-color: var(--acc-color);
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            padding: 0.5em 1em;
+            border-radius: 100px;
+            transform: translateY(-65px);
+            visibility: hidden;
+            /* transition: 0.1s ease-in; */
+        }
+        a::after{
+            content: '';
+            height: 0;
+            width: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid var(--acc-color);
+            transform: translateY(-65px);
+            visibility: hidden;
+        }
+        a:hover::before{
+            visibility: visible;
+        }
+        a:hover::after{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="icons">
+        <a style="--acc-color:#1877F2;" social="Facebook" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a style="--acc-color:#d62976;" social="Instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a style="--acc-color:#25D366;" social="Whatsapp" href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        <a style="--acc-color:black;" social="X" href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+</body>
+</html>
