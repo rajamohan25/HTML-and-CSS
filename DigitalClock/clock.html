@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Poppins", serif;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        font-weight: 700;
+        gap: 6px;
+    }
+    .opt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+    .hr::after{
+        content: ':';
+    }
+    .container{
+        height: 180px; 
+        width: 430px;
+        background-color: #1b263b;
+        color: white;
+        border-radius: 15px;
+    }
+    .sec{
+        font-size: 40px;
+        color: #e0e1dd;
+    }
+    .noon{
+        font-size: 25px;
+        color: #778da9;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="hr"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+            <div class="noon"></div>
+        </div>
+        <div class="opt">
+            <div class="day"></div>
+            <div class="date"></div>
+            <div class="mon"></div>
+        </div>
+    </div>
+    <script>
+        let hr = document.querySelector('.hr')
+        let mt = document.querySelector('.min')
+        let se = document.querySelector('.sec')
+        let no = document.querySelector('.noon')
+        let dy = document.querySelector('.day')
+        let da = document.querySelector('.date')
+        let mo = document.querySelector('.mon')
+
+        let today = () => {
+
+            let getDateTime = new Date()
+            let hour = getDateTime.getHours()
+            let min = getDateTime.getMinutes()
+            let sec = getDateTime.getSeconds()
+            let noon = 'AM'
+            let day = getDateTime.getDay()
+            let date = getDateTime.getDate()
+            let month = getDateTime.getMonth()
+
+            if(hour<10) {
+                hour = '0' + hour
+            }
+            if(hour>12) {
+                hour = hour - 12
+                noon = 'PM'
+                if(hour<10) {
+                    hour = '0' + hour
+                }
+            }
+            hr.innerText = hour
+            
+            if(min<10) {
+                min = '0' + min
+            }
+            mt.innerText = min
+
+            if(sec<10) {
+                sec = '0' + sec
+            }
+            se.innerText = sec
+
+            no.innerText = noon
+
+            if(day==0) {
+                dy.innerText = 'Sunday,'
+            }
+            if(day==1) {
+                dy.innerText = 'Monday,'
+            }
+            if(day==2) {
+                dy.innerText = 'Tuesday,'
+            }
+            if(day==3) {
+                dy.innerText = 'Wednesday,'
+            }
+            if(day==4) {
+                dy.innerText = 'Thursday,'
+            }
+            if(day==5) {
+                dy.innerText = 'Friday,'
+            }
+            if(day==6) {
+                dy.innerText = 'Saturday,'
+            }
+            da.innerText = date
+            if(month==0) {
+                mo.innerText = 'January'
+            }
+            if(month==1) {
+                mo.innerText = 'February'
+            }
+            if(month==0) {
+                mo.innerText = 'March'
+            }
+            if(month==0) {
+                mo.innerText = 'April'
+            }
+            if(month==0) {
+                mo.innerText = 'May'
+            }
+            if(month==0) {
+                mo.innerText = 'June'
+            }
+            if(month==0) {
+                mo.innerText = 'July'
+            }
+            if(month==0) {
+                mo.innerText = 'August'
+            }
+            if(month==0) {
+                mo.innerText = 'September'
+            }
+            if(month==0) {
+                mo.innerText = 'October'
+            }
+            if(month==0) {
+                mo.innerText = 'November'
+            }
+            if(month==0) {
+                mo.innerText = 'December'
+            }
+        }
+        setInterval(today,1000)
+    </script>
+</body>
+</html>
