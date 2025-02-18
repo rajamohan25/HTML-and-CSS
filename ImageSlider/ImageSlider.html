@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #ccc6c6;
+            font-family: "Poppins", serif;
+            overflow: hidden;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100vw;
+            height: 100vh;
+            background: #f5f5f5;
+        }
+        .item{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 70%;
+            transform: translate(0,-50%);
+            border-radius: 20px;
+            box-shadow: 0px 30px 50px #000;
+            background-position: 50% 50%;
+            background-size: cover;
+            display: inline-block;
+            transition: 0.5s;
+        }
+        .item:nth-child(1),
+        .item:nth-child(2){
+            top: 0;
+            left: 0;
+            transform: translate(0,0);
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .item:nth-child(3){
+            left: 50%;
+        }
+        .item:nth-child(4){
+            left: calc(50% + 220px);
+        }
+        .item:nth-child(5){
+            left: calc(50% + 440px);
+        }
+        .item:nth-child(n + 6){
+            left: calc(50% + 660px);
+            opacity: 0;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0,-50%);
+            display: none;
+        }
+        .item:nth-child(2) .content{
+            display: block;
+        }
+        .name{
+            font-size: 40px;
+            font-weight: bold;
+            opacity: 0;
+            transition: 0.3s ease-in;
+            animation: animate 1s ease-in-out 1 forwards;
+        }
+        .des{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: 0.3s ease-in;
+            animation: animate 1s ease-in-out 0.3s  1 forwards;
+        }
+        a{
+            padding: 10px 20px;
+            background-color: white;
+            cursor: pointer;
+            opacity: 0;
+            text-decoration: none;
+            color: #000;
+            font-size: 13px;
+            border-radius: 50px;
+            animation: animate 1s ease-in-out 0.6s  1 forwards;
+            font-family: "Poppins", serif;
+        }
+        .fa-youtube{
+            color: red;
+            padding-right: 4px;
+        }
+        @keyframes animate {
+            from{
+                opacity: 0;
+                transform: translate(0,100px);
+                filter: blur(33px);
+            }
+            to{
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+        .button{
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+        .button button{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border: 1px solid #000;
+            transition: 0.3s;
+        }
+        .button button:hover{
+            background: #ababab;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item"
+                style="background-image: url(1130050.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Philosopher's Stone</div>
+                    <div class="des">Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.</div>
+                    <a href="https://youtu.be/l91Km49W9qI?si=vUOLINqVZ0rHpzdF" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130055.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Chamber of Secrets</div>
+                    <div class="des">A house-elf warns Harry against returning to Hogwarts, but he decides to ignore it. When students and creatures at the school begin to get petrified, Harry finds himself surrounded in mystery.</div>
+                    <a href="https://youtu.be/nE11U5iBnH0?si=UQlnaLLppMamWp_G" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130058.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Prisoner of Azkaban</div>
+                    <div class="des">Harry, Ron and Hermoine return to Hogwarts just as they learn about Sirius Black and his plans to kill Harry. However, when Harry runs into him, he learns that the truth is far from reality.</div>
+                    <a href="https://youtu.be/cK2WNlj6kR0?si=FqSYcgHybPViQC9s" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130065.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Goblet of Fire</div>
+                    <div class="des">In his fourth year at Hogwarts, Harry must reluctantly compete in an ancient wizard tournament after someone mysteriously selects his name, while the Dark Lord secretly conspires something sinister.</div>
+                    <a href="https://youtu.be/80kuiBq95So?si=mm8No86JvZ1s27yN" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130096.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Order of the Phoenix</div>
+                    <div class="des">Harry Potter and Dumbledore's warning about the return of Lord Voldemort is not heeded by the wizard authorities who, in turn, look to undermine Dumbledore's authority at Hogwarts and discredit Harry.</div>
+                    <a href="https://youtu.be/LLAaW1EgyY8?si=dk7QIyzJWIsfDPFQ" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130101.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Half-Blood Prince</div>
+                    <div class="des">Dumbledore and Harry Potter learn more about Voldemort's past and his rise to power. Meanwhile, Harry stumbles upon an old potions textbook belonging to a person calling himself the Half-Blood Prince.</div>
+                    <a href="https://youtu.be/RiAmoT8R4Ic?si=cmEYo2v0PWEP5bzu" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130106.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Deathly Hallows: Part 1</div>
+                    <div class="des">Harry, Ron and Hermione go into hiding as Voldemort takes over the Ministry of Magic. Later, the trio tries to decipher the clues left to them by Dumbledore to find and destroy Voldemort's Horcruxes.</div>
+                    <a href="https://youtu.be/0Q3O8rauQx0?si=L0OP3Sb9fKVfl8OS" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(1130112.jpg);">
+                <div class="content">
+                    <div class="name">Harry Potter and the Deathly Hallows: Part 2</div>
+                    <div class="des">Harry, Ron and Hermione set out on a quest to eliminate the remaining horcruxes. On the other hand, the students and teachers must unite to defend Hogwarts against Lord Voldemort and his minions.</div>
+                    <a href="https://youtu.be/0Q3O8rauQx0?si=L0OP3Sb9fKVfl8OS" target="_blank"><i class="fa-brands fa-youtube"></i>Watch trailer</a>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+        next.addEventListener('click', ()=>{
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        })
+        prev.addEventListener('click', ()=>{
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length-1])
+        })
+    </script>
+</body>
+</html>
